@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/common.css/style.css">
+    <script src="/js/common.js/common.js" defer></script>
     <title>Cotizador de Monedas - Inicio</title>
 </head>
 
@@ -65,135 +66,22 @@
                         <select name="monedas" id="monedas">
                             <option value="">Elegir</option>
                             <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles</option>
-                            <option value="dolar_oficial">Dólar Oficial</option>
-                            <option value="dolar_blue">Dólar Blue</option>
-                            <option value="dolar_bolsa">Dólar Bolsa (MEP)</option>
-                            <option value="dolar_liqui">Dólar cortado con Liqui (CCL)</option>
-                            <option value="dolar_tarjeta">Dólar Tarjeta</option>
-                            <option value="dolar_mayorista">Dólar Mayorista</option>
-                            <option value="dolar_cripto">Dólar Cripto</option>
-                            <option value="euro">Euro</option>
-                            <option value="real">Real Brasileño</option>
+                            <option value="dolar">Dólar (todas las cotizaciones del dólar)</option>
+                            <option value="eur">Euro</option>
+                            <option value="brl">Real Brasileño</option>
                             <option value="peso_chileno">Peso Chileno</option>
                             <option value="peso_uruguayo">Peso Uruguayo</option>
-                        </select>
+                        </select>                        
                         <button class="boton_busqueda" title="Buscar"><img src="img/boton-busqueda.svg" alt="buscar"></button>
                     </div>
                 </div>
                 <!--ACTUALIZACION DE DATOS-->
                 <div class="actualizacion">
-                    <p>Datos actualizados al 22/5/2024 22:00 hs.</p>
+                    <p id="actualizacionDatos">Datos actualizados al 22/5/2024 22:00 hs.</p>
                 </div>
                 <!--COTIZACION DE MONEDAS-->
-                <div class="monedas_inicio">
-                    <div class="contenedor_precio">
-                        <div class="lado-izquierdo">
-                            <p>OFICIAL</p>
-                        </div>
-                        <div class="lado-derecho">
-                            <div>
-                                <p>Compra</p>
-                                <p class="precio">$847</p>
-                            </div>
-                            <div>
-                                <p>Venta</p>
-                                <p class="precio">$887</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-boton-favoritos">
-                        <button class="boton_favoritos_agregado" title="Eliminar de favoritos"></button>
-                    </div>
-                    <div class="contenedor_precio">
-                        <div class="lado-izquierdo">
-                            <p>BLUE</p>
-                        </div>
-                        <div class="lado-derecho">
-                            <div>
-                                <p>Compra</p>
-                                <p class="precio">$995</p>
-                            </div>
-                            <div>
-                                <p>Venta</p>
-                                <p class="precio">$1015</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-boton-favoritos">
-                        <button class="boton_favoritos" title="Agregar a favoritos"></button>
-                    </div>
-                    <div class="contenedor_precio">
-                        <div class="lado-izquierdo">
-                            <p>TARJETA</p>
-                        </div>
-                        <div class="lado-derecho">
-                            <div>
-                                <p>Compra</p>
-                                <p class="precio">$1355.2</p>
-                            </div>
-                            <div>
-                                <p>Venta</p>
-                                <p class="precio">$1419.2</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-boton-favoritos">
-                        <button class="boton_favoritos" title="Agregar a favoritos"></button>
-                    </div>
-                    <div class="contenedor_precio">
-                        <div class="lado-izquierdo">
-                            <p>MEP</p>
-                        </div>
-                        <div class="lado-derecho">
-                            <div>
-                                <p>Compra</p>
-                                <p class="precio">$996.09</p>
-                            </div>
-                            <div>
-                                <p>Venta</p>
-                                <p class="precio">$1000.6</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-boton-favoritos">
-                        <button class="boton_favoritos" title="Agregar a favoritos"></button>
-                    </div>
-                    <div class="contenedor_precio">
-                        <div class="lado-izquierdo">
-                            <p>CCL</p>
-                        </div>
-                        <div class="lado-derecho">
-                            <div>
-                                <p>Compra</p>
-                                <p class="precio">$1030.6</p>
-                            </div>
-                            <div>
-                                <p>Venta</p>
-                                <p class="precio">$1038.6</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-boton-favoritos">
-                        <button class="boton_favoritos" title="Agregar a favoritos"></button>
-                    </div>
-                    <div class="contenedor_precio">
-                        <div class="lado-izquierdo">
-                            <p>CRIPTO</p>
-                        </div>
-                        <div class="lado-derecho">
-                            <div>
-                                <p>Compra</p>
-                                <p class="precio">$1050</p>
-                            </div>
-                            <div>
-                                <p>Venta</p>
-                                <p class="precio">$1086</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenedor-boton-favoritos">
-                        <button class="boton_favoritos" title="Agregar a favoritos"></button>
-                    </div>
+                <div class="monedas_inicio" id="exchangeRates">
+                    
                 </div>
             </div>
         </main>
@@ -235,6 +123,9 @@
             <p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p>
         </div>
     </footer>
+
+
+    
 </body>
 
 </html>
